@@ -1,4 +1,5 @@
-div {
+.question1 {
+  margin: 50px;   
   width: 100px;
   height: 100px;
   background-color: pink;
@@ -8,15 +9,26 @@ div {
 
 @keyframes myAnimation {
     0% {
-        background-color: pink;
-        transform: translateX(0);
-    }
-    50% {
-        background-color: lightblue;
-        transform: translateX(200px);
-    }
-    100% {
-        background-color: lightgreen;
-        transform: translateX(0);
-    }
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.question2 {
+  margin: 50px;   
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  animation-name: moveAnimation;
+  animation-duration: 4s;
+  position: relative;
+}
+
+@keyframes moveAnimation {
+    from {background-color: green;}
+  to {background-color: lightblue;}
 }
